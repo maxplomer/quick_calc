@@ -4,6 +4,14 @@ module Main
     def index
       # Add code for when the index view is loaded
       page._new_calculation = ""
+      %x{
+        $( document ).ready(function() {
+          $("button").mousedown(function(evt) { 
+            evt.preventDefault(); 
+          });
+        });
+      }
+      
     end
 
     def about
