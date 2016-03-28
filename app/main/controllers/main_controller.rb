@@ -46,6 +46,12 @@ module Main
       page._new_calculation = ""
     end
 
+    def focus_input
+      `document.getElementById("equation-input").focus()`
+
+      nil
+    end
+
     private
 
     # The main template contains a #template binding that shows another

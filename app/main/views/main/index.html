@@ -16,30 +16,30 @@
   
   <form e-submit="run_calculation">
     <input id="equation-input" value="{{ page._new_calculation }}" required autofocus>
-    <button id="backspace" type="button" e-click="page._new_calculation = page._new_calculation[0...-1]"><i class="fa fa-arrow-left"></i></button>
+    <button id="backspace" type="button" e-click="page._new_calculation = page._new_calculation[0...-1];focus_input;"><i class="fa fa-arrow-left"></i></button>
 
     <br><br>
 
     <div class="calculator">
-      <button type="button" e-click="page._new_calculation += '1'">1</button>
-      <button type="button" e-click="page._new_calculation += '2'">2</button>
-      <button type="button" e-click="page._new_calculation += '3'">3</button>
-      <button type="button" e-click="page._new_calculation += ' + '">+</button>
+      <button type="button" e-click="page._new_calculation += '1';focus_input;">1</button>
+      <button type="button" e-click="page._new_calculation += '2';focus_input;">2</button>
+      <button type="button" e-click="page._new_calculation += '3';focus_input;">3</button>
+      <button type="button" e-click="page._new_calculation += ' + ';focus_input;">+</button>
       <br>
-      <button type="button" e-click="page._new_calculation += '4'">4</button>
-      <button type="button" e-click="page._new_calculation += '5'">5</button>
-      <button type="button" e-click="page._new_calculation += '6'">6</button>
-      <button type="button" e-click="page._new_calculation += ' - '">-</button>
+      <button type="button" e-click="page._new_calculation += '4';focus_input;">4</button>
+      <button type="button" e-click="page._new_calculation += '5';focus_input;">5</button>
+      <button type="button" e-click="page._new_calculation += '6';focus_input;">6</button>
+      <button type="button" e-click="page._new_calculation += ' - ';focus_input;">-</button>
       <br>
-      <button type="button" e-click="page._new_calculation += '7'">7</button>
-      <button type="button" e-click="page._new_calculation += '8'">8</button>
-      <button type="button" e-click="page._new_calculation += '9'">9</button>
-      <button type="button" e-click="page._new_calculation += ' * '">*</button>
+      <button type="button" e-click="page._new_calculation += '7';focus_input;">7</button>
+      <button type="button" e-click="page._new_calculation += '8';focus_input;">8</button>
+      <button type="button" e-click="page._new_calculation += '9';focus_input;">9</button>
+      <button type="button" e-click="page._new_calculation += ' * ';focus_input;">*</button>
       <br>
-      <button type="button" e-click="page._new_calculation = ''">clear</button>
-      <button type="button" e-click="page._new_calculation += '0'">0</button>
+      <button type="button" e-click="page._new_calculation = '';focus_input;">clear</button>
+      <button type="button" e-click="page._new_calculation += '0';focus_input;">0</button>
       <button type="submit">=</button>
-      <button type="button" e-click="page._new_calculation += ' / '">/</button>
+      <button type="button" e-click="page._new_calculation += ' / ';focus_input;">/</button>
       <br>
     </div>
   </form>
