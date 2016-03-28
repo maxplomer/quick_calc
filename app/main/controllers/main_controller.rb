@@ -13,8 +13,28 @@ module Main
     def run_calculation
       return if page._new_calculation == ""
      
-      `var calcStr = #{ page._new_calculation };`
-      `alert(eval(calcStr));`
+      %x{
+        try {
+          var my_result = eval(#{ page._new_calculation }); // might generate an exception
+        }
+        catch (e) {
+          // statements to handle any exceptions
+          console.log(e); // output exception object to console
+        }
+        if (typeof my_result === 'undefined') {
+          #{ print_error }
+        } else {
+          #{ save_calculation }
+        }
+      }
+    end
+
+    def print_error
+      `alert('print_error')`
+    end
+
+    def save_calculation
+      `alert('save_calculation')`
     end
 
     private
