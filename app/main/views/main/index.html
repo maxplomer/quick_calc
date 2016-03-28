@@ -3,6 +3,7 @@
 
 <:Body>
   <h1>Home</h1>
-  <input placeholder="Enter Equation" value="{{ page._new_calculation }}" style="width:500px">
-  <button e-click="run_calculation">=</button>
-
+  <form e-submit="run_calculation">
+    <input placeholder="Enter Equation" value="{{ page._new_calculation }}" style="width:500px" required>
+    <button type="submit">=</button>
+  </form>
