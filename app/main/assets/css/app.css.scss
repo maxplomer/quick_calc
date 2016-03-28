@@ -1,1 +1,12 @@
 // Place your apps css here
+
+#equation-input {
+  border: 1px solid rgb(208,208,208);
+  outline: 0;
+  padding: 7px 10px;
+  width: 585px;
+}
+
+#equation-input:focus {
+  border: 1px solid rgb(59,123,255);
+}
