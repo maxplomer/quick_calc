@@ -3,10 +3,18 @@ module Main
   class MainController < Volt::ModelController
     def index
       # Add code for when the index view is loaded
+      page._new_calculation = ""
     end
 
     def about
       # Add code for when the about view is loaded
+    end
+
+    def run_calculation
+      return if page._new_calculation == ""
+     
+      `var calcStr = #{ page._new_calculation };`
+      `alert(eval(calcStr));`
     end
 
     private
