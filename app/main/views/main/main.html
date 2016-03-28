@@ -2,9 +2,7 @@
   {{ view main_path, "title", {controller_group: 'main'} }}
 
 <:Body>
-  <div class="container">
-    <:volt:notices />
+  <:volt:notices />
 
-    {{ view main_path, 'body', {controller_group: 'main'} }}
-  </div>
+  {{ view main_path, 'body', {controller_group: 'main'} }}
 

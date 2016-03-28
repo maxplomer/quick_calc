@@ -2,25 +2,25 @@
   Home
 
 <:Body>
-  <h1 class="margin-left-50">
+  <h1>
     <span id="title-quick">Quick</span><span id="title-calc">Calc</span><span id="title-dot">.</span><span id="title-co">co</span>
   </h1>
 
   <br><br>
 
-  <h3 class="margin-left-50">Start Calculation</h3>
-  <div style="width:70%">
-    You can use all valid JavaScript math symbols and functions, such as: + , * , Math.floor( ) , Math.pow( ) , ...
-  </div>
+  <h3>Start Calculation</h3>
+  You can use all valid JavaScript math symbols and functions, such as: <br>
+  <font size=3>+ , * , Math.floor( ) , Math.pow( ) , ...</font>
+  
   <br><br>
+  
   <form e-submit="run_calculation">
     <input id="equation-input" value="{{ page._new_calculation }}" required autofocus>
     <button id="backspace" type="button" e-click="page._new_calculation = page._new_calculation[0...-1]"><i class="fa fa-arrow-left"></i></button>
 
-
     <br><br>
 
-    <div class="margin-left-50 calculator">
+    <div class="calculator">
       <button type="button" e-click="page._new_calculation += '1'">1</button>
       <button type="button" e-click="page._new_calculation += '2'">2</button>
       <button type="button" e-click="page._new_calculation += '3'">3</button>
@@ -45,7 +45,7 @@
 
   <br><br>
   
-  <h3 class="margin-left-50">Recent Calculations</h3>
+  <h3>Recent Calculations</h3>
 
   {{ store._calculations.reverse.each do |calculation| }}
     {{ calculation._equation }} = {{ calculation._result }}<br>
