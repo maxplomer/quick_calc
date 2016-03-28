@@ -28,7 +28,7 @@ module Main
         if (typeof my_result === 'undefined') {
           #{ print_error }
         } else {
-          #{ save_calculation(`my_result`) }
+          #{ save_calculation(String(`my_result`)) }
         }
       }
     end
