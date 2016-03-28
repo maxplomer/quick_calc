@@ -2,7 +2,13 @@
   Home
 
 <:Body>
-  <h1>Start Calculation</h1>
+  <h1 style="margin-left: 50px;">
+    <span id="title-quick">Quick</span><span id="title-calc">Calc</span><span id="title-dot">.</span><span id="title-co">co</span>
+  </h1>
+
+  <br><br><br><br>
+
+  <h3>Start Calculation</h3>
   You can use all valid JavaScript math symbols and functions, such as: + , * , Math.floor( ) , Math.pow( ) , ...
   <br><br>
   <form e-submit="run_calculation">
@@ -10,7 +16,9 @@
     <button type="submit">=</button>
   </form>
 
-  <h1>Recent Calculations</h1>
+  <br><br><br><br>
+  
+  <h3>Recent Calculations</h3>
 
   {{ store._calculations.reverse.each do |calculation| }}
     {{ calculation._equation }} = {{ calculation._result }}<br>
