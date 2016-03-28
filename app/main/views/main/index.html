@@ -2,8 +2,16 @@
   Home
 
 <:Body>
-  <h1>Home</h1>
+  <h1>Start Calculation</h1>
+  (You can use all valid JavaScript math symbols and function, ex: Math.floor, Math.pow, etc)<br><br>
   <form e-submit="run_calculation">
     <input placeholder="Enter Equation" value="{{ page._new_calculation }}" style="width:500px" required>
     <button type="submit">=</button>
   </form>
+
+  <h1>Recent Calculations</h1>
+
+  {{ store._calculations.reverse.each do |calculation| }}
+    {{ calculation._equation }} = {{ calculation._result }}<br>
+
+  {{ end }}

@@ -24,7 +24,7 @@ module Main
         if (typeof my_result === 'undefined') {
           #{ print_error }
         } else {
-          #{ save_calculation }
+          #{ save_calculation(`my_result`) }
         }
       }
     end
@@ -33,8 +33,13 @@ module Main
       flash._errors << 'We were unable to evaluate your equation!'
     end
 
-    def save_calculation
-      `alert('save_calculation')`
+    def save_calculation(result)
+      store._calculations << {
+        equation: page._new_calculation,
+        result: result
+      }
+
+      page._new_calculation = ""
     end
 
     private
