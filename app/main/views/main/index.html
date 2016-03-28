@@ -47,7 +47,18 @@
   
   <h3>Recent Calculations</h3>
 
-  {{ store._calculations.reverse.each do |calculation| }}
-    {{ calculation._equation }} = {{ calculation._result }}<br>
-
-  {{ end }}
+  <div style="display:inline-block;text-align:right;">
+    {{ store._calculations.reverse.each do |calculation| }}
+      {{ calculation._equation }} <br>
+    {{ end }}
+  </div>
+  <div style="display:inline-block;">
+    {{ store._calculations.each do |calculation| }}
+       = <br>
+    {{ end }}
+  </div>
+  <div style="display:inline-block;text-align:left">
+    {{ store._calculations.reverse.each do |calculation| }}
+      {{ calculation._result }}<br>
+    {{ end }}
+  </div>
