@@ -29,7 +29,7 @@
   font-style: italic;
 }
 
-.calculator > button {
+.calculator > button, #backspace {
   background-color: white;
   border: 1px solid rgb(230,230,230);
   border-radius: 4px;
@@ -38,11 +38,11 @@
   width: 50px;
 }
 
-.calculator > button:hover {
+.calculator > button:hover, #backspace:hover{
   border: 1px solid rgb(208,208,208);
 }
 
-.calculator > button:active {
+.calculator > button:active, #backspace:active {
   background-color: rgb(241,241,241);
   border: 1px solid rgb(186,186,186);
 }

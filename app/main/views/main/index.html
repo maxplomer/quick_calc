@@ -15,7 +15,7 @@
   <br><br>
   <form e-submit="run_calculation">
     <input id="equation-input" value="{{ page._new_calculation }}" required autofocus>
-    <button type="submit">=</button>
+    <button id="backspace" type="button" e-click="page._new_calculation = page._new_calculation[0...-1]"><i class="fa fa-arrow-left"></i></button>
 
 
     <br><br>
