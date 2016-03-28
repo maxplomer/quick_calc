@@ -6,4 +6,3 @@ The site is a Volt app that interacts with a MongoDB database to save informatio
 
 #Todos:
  - Only grab recent calculations as opposed to displaying all calculations in reverse. (Also real-time calculation are not always in order for all users, need an index/date value to sort by)
- - When click calculator buttons want to focus input if not already.
