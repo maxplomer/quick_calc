@@ -29,6 +29,24 @@
   font-style: italic;
 }
 
+.calculator > button {
+  background-color: white;
+  border: 1px solid rgb(230,230,230);
+  border-radius: 4px;
+  outline: 0;
+  margin-bottom: 5px;
+  width: 50px;
+}
+
+.calculator > button:hover {
+  border: 1px solid rgb(208,208,208);
+}
+
+.calculator > button:active {
+  background-color: rgb(241,241,241);
+  border: 1px solid rgb(186,186,186);
+}
+
 .margin-left-50 {
   margin-left: 50px;
 }

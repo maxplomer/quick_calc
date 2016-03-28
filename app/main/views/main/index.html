@@ -16,9 +16,34 @@
   <form e-submit="run_calculation">
     <input id="equation-input" value="{{ page._new_calculation }}" required autofocus>
     <button type="submit">=</button>
+
+
+    <br><br>
+
+    <div class="margin-left-50 calculator">
+      <button type="button" e-click="page._new_calculation += '1'">1</button>
+      <button type="button" e-click="page._new_calculation += '2'">2</button>
+      <button type="button" e-click="page._new_calculation += '3'">3</button>
+      <button type="button" e-click="page._new_calculation += ' + '">+</button>
+      <br>
+      <button type="button" e-click="page._new_calculation += '4'">4</button>
+      <button type="button" e-click="page._new_calculation += '5'">5</button>
+      <button type="button" e-click="page._new_calculation += '6'">6</button>
+      <button type="button" e-click="page._new_calculation += ' - '">-</button>
+      <br>
+      <button type="button" e-click="page._new_calculation += '7'">7</button>
+      <button type="button" e-click="page._new_calculation += '8'">8</button>
+      <button type="button" e-click="page._new_calculation += '9'">9</button>
+      <button type="button" e-click="page._new_calculation += ' * '">*</button>
+      <br>
+      <button type="button" e-click="page._new_calculation = ''">clear</button>
+      <button type="button" e-click="page._new_calculation += '0'">0</button>
+      <button type="submit">=</button>
+      <button type="button" e-click="page._new_calculation += ' / '">/</button>
+    </div>
   </form>
 
-  <br><br><br><br>
+  <br><br>
   
   <h3 class="margin-left-50">Recent Calculations</h3>
 
