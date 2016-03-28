@@ -14,10 +14,6 @@ module Main
       
     end
 
-    def about
-      # Add code for when the about view is loaded
-    end
-
     def run_calculation
       return if page._new_calculation == ""
      
@@ -57,12 +53,6 @@ module Main
     # on the params._component, params._controller, and params._action values.
     def main_path
       "#{params._component || 'main'}/#{params._controller || 'main'}/#{params._action || 'index'}"
-    end
-
-    # Determine if the current nav component is the active one by looking
-    # at the first part of the url against the href attribute.
-    def active_tab?
-      url.path.split('/')[1] == attrs.href.split('/')[1]
     end
   end
 end
