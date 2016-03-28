@@ -30,7 +30,7 @@ module Main
     end
 
     def print_error
-      `alert('print_error')`
+      flash._errors << 'We were unable to evaluate your equation!'
     end
 
     def save_calculation
