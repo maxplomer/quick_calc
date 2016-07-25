@@ -10,3 +10,5 @@ compiled
 .env
 
 dokku.env
+
+dokkuserverminimalist.pem
